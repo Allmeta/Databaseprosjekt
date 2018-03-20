@@ -1,10 +1,14 @@
 package src.dagbok;
 
 import javafx.application.Application;
+
+
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+
+/*fuck metadata*/
 
 @SuppressWarnings("unused")
 public class Main extends Application{
