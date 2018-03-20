@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <bottom>
+      <SplitPane orientation="VERTICAL" prefHeight="72.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+               <children>
+                  <Button layoutX="67.0" layoutY="20.0" mnemonicParsing="false" onAction="#CancelReg" text="Cancel" />
+                  <Button fx:id="Submit" layoutX="475.0" layoutY="20.0" mnemonicParsing="false" onAction="#SubmitReg" text="Submit" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </bottom>
+   <center>
+      <SplitPane dividerPositions="0.07190635451505016" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TextField fx:id="Fornavn" layoutX="133.0" layoutY="45.0" />
+                  <TextField fx:id="Etternavn" layoutX="133.0" layoutY="101.0" />
+                  <TextField fx:id="Pnr" layoutX="133.0" layoutY="157.0" />
+                  <TextField fx:id="Brukernavn" layoutX="133.0" layoutY="208.0" />
+                  <TextField fx:id="Passord" layoutX="133.0" layoutY="256.0" />
+                  <Text layoutX="31.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fornavn" />
+                  <Text layoutX="31.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Etternavn" />
+                  <Text layoutX="31.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Personnr" />
+                  <Text layoutX="31.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bruknavn" />
+                  <Text layoutX="31.0" layoutY="277.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Passord" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </center>
+</BorderPane>
