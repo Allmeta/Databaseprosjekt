@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="src.dagbok.FXMLControllers.LoginController">
    <center>
       <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" spacing="10.0" BorderPane.alignment="CENTER">
          <children>
@@ -18,8 +18,8 @@
    <bottom>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="logginn" mnemonicParsing="false" onAction="#Logginn" text="Logg inn" />
-            <Button fx:id="registrerdeg" mnemonicParsing="false" onAction="#Registrerdeg" text="Registrer deg" />
+            <Button mnemonicParsing="false" onAction="#Login" text="Logg inn" />
+            <Button mnemonicParsing="false" onAction="#Reg" text="Registrer deg" />
          </children>
       </HBox>
    </bottom>
@@ -31,4 +31,16 @@
          </children>
       </VBox>
    </left>
+   <top>
+      <VBox alignment="CENTER" prefHeight="115.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Logg inn">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Separator prefWidth="200.0" />
+         </children>
+      </VBox>
+   </top>
 </BorderPane>

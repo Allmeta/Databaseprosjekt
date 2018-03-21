@@ -5,17 +5,16 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="443.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="src.dagbok.FXMLControllers.RegisterController">
    <bottom>
       <SplitPane orientation="VERTICAL" prefHeight="72.0" prefWidth="600.0" BorderPane.alignment="CENTER">
         <items>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
                <children>
-                  <Button layoutX="67.0" layoutY="20.0" mnemonicParsing="false" onAction="#CancelReg" text="Cancel" />
-                  <Button fx:id="Submit" layoutX="475.0" layoutY="20.0" mnemonicParsing="false" onAction="#SubmitReg" text="Submit" />
+                  <Button fx:id="Cancel" mnemonicParsing="false" onAction="#CancelReg" text="Avbryt" />
+                  <Button fx:id="Submit" mnemonicParsing="false" onAction="#SubmitReg" text="Registrer" />
                </children>
-            </AnchorPane>
+            </HBox>
         </items>
       </SplitPane>
    </bottom>
@@ -33,11 +32,22 @@
                   <Text layoutX="31.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fornavn" />
                   <Text layoutX="31.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Etternavn" />
                   <Text layoutX="31.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Personnr" />
-                  <Text layoutX="31.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bruknavn" />
+                  <Text layoutX="31.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Brukernavn" />
                   <Text layoutX="31.0" layoutY="277.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Passord" />
                </children>
             </AnchorPane>
         </items>
       </SplitPane>
    </center>
+   <top>
+      <VBox alignment="CENTER" prefHeight="49.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Registrer bruker">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </top>
 </BorderPane>

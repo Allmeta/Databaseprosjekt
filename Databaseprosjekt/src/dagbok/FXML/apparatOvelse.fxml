@@ -6,8 +6,7 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="637.0" prefWidth="758.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="637.0" prefWidth="758.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="src.dagbok.FXMLControllers.NyAppOvelseController">
    <top>
       <AnchorPane prefHeight="538.0" prefWidth="758.0" BorderPane.alignment="CENTER">
          <children>
@@ -60,8 +59,8 @@
    <bottom>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="Submit" mnemonicParsing="false" onAction="#Submit" text="Send inn" />
-            <Button fx:id="Cancel" mnemonicParsing="false" onAction="#Cancel" text="Avbryt" />
+            <Button fx:id="Submit" mnemonicParsing="false" onAction="#onSubmit" text="Send inn" />
+            <Button fx:id="Cancel" mnemonicParsing="false" onAction="#onCancel" text="Avbryt" />
          </children>
       </HBox>
    </bottom>

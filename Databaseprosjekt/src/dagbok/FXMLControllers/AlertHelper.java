@@ -1,4 +1,4 @@
-package src.dagbok;
+package src.dagbok.FXMLControllers;
 
 
 
