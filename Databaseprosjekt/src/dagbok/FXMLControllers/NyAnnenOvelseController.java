@@ -37,7 +37,7 @@ public class NyAnnenOvelseController extends Controller{
 		});
 	}
 	public void fillItems() {
-		for(KeyValuePair k : main.HentTreningsgrupper()) {
+		for(KeyValuePair k : main.ovelsegrupper) {
 			ovelse.getItems().add(k);
 		}
 		ovelse.getSelectionModel().selectFirst();

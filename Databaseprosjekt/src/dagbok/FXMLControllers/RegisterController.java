@@ -46,16 +46,16 @@ public class RegisterController extends Controller{
 		Window owner = Submit.getScene().getWindow();
 
 		if (Fornavn.getText().isEmpty() || Etternavn.getText().isEmpty()) {
-			AlertHelper.showAlert(Alert.AlertType.ERROR, owner, "Form Error!", "Vennilgt skriv navnet ditt");
+			AlertHelper.showAlert(Alert.AlertType.ERROR, owner, "Form Error!", "Vennligst skriv navnet ditt");
 			return;
 		}
 
 		if (Passord.getText().isEmpty()) {
-			AlertHelper.showAlert(Alert.AlertType.ERROR, owner, "Form Error!", "Vennilgt skriv et passord");
+			AlertHelper.showAlert(Alert.AlertType.ERROR, owner, "Form Error!", "Vennligst skriv et passord");
 			return;
 		}
 
-		AlertHelper.showAlert(Alert.AlertType.CONFIRMATION, owner, "Registrering fullfÃ¸rt!",
+		AlertHelper.showAlert(Alert.AlertType.CONFIRMATION, owner, "Registrering fullført!",
 				"Velkommen " + Fornavn.getText());
 		main.Register(Fornavn.getText(),Etternavn.getText(),Brukernavn.getText(),Pnr.getText(),Passord.getText());
 		
@@ -65,17 +65,7 @@ public class RegisterController extends Controller{
 		String etternavn = Etternavn.getText().toString();
 		String pnummer = Pnr.getText().toString();
 		
-		
-		
-		String sql = "INSERT INTO Person( Personnummer, fornavn, etternavn, passord, brukernavn) values('" + pnummer + "', '" + fornavn + "', '" + etternavn + "', '" + password + "', '" + username + "') " ;
-		
-		
-		Statement statement = main.conn.createStatement();
-		statement.executeUpdate(sql);
-		
-		
-		
-		
+		main.Register(username, password, fornavn, etternavn, pnummer);		
 		
 		goToLogin((Stage)Fornavn.getScene().getWindow(),main);
 

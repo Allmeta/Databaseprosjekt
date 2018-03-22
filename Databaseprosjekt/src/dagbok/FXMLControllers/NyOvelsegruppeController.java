@@ -20,7 +20,7 @@ public class NyOvelsegruppeController extends Controller{
 	}
 	
 	@FXML
-	public void Registrer() throws IOException {
+	public void Registrer() throws IOException, SQLException {
 		String ovelse = faNavn();
 		main.RegistrerNyOvelsegruppe(ovelse);	
 		

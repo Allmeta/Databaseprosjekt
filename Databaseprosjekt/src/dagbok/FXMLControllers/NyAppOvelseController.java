@@ -49,12 +49,12 @@ public class NyAppOvelseController extends Controller {
 
 	protected void fillItems() {
 		// TODO Auto-generated method stub
-		for(KeyValuePair k : main.HentTreningsgrupper()) {
+		for(KeyValuePair k : main.ovelsegrupper) {
 			ovelse.getItems().add(k);
 		}
 		ovelse.getSelectionModel().selectFirst();
 		//apparat
-		for(KeyValuePair k : main.HentApparater()) {
+		for(KeyValuePair k : main.apparater) {
 			apparat.getItems().add(k);
 		}
 		apparat.getSelectionModel().selectFirst();		
