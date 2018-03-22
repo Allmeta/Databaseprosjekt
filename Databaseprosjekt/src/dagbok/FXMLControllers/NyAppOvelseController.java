@@ -2,43 +2,57 @@ package src.dagbok.FXMLControllers;
 
 import java.io.IOException;
 
-import javafx.event.ActionEvent;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.control.Button;
-import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import javafx.stage.Window;
-import src.dagbok.DBControllers.DBController;
+import src.dagbok.DBControllers.KeyValuePair;
 
-public class NyAppOvelseController extends Controller{
+public class NyAppOvelseController extends Controller {
 	@FXML
-    private TextField navn;
+	private TextField navn;
 	@FXML
-    private ChoiceBox ovelse;
+	private ComboBox<KeyValuePair> ovelse;
 	@FXML
-    private TextField apparat;
+	private TextField apparat;
 	@FXML
-    private TextField kilo;
+	private TextField kilo;
 	@FXML
-    private TextField notat;
-	
+	private TextField notat;
+
 	@FXML
 	public void onSubmit() throws IOException {
-		//how to submit to mysql shiet
-		main.RegistrerNyApparatOvelse(navn.getText(),ovelse.getSelectionModel().getSelectedItem().toString(),apparat.getText(),kilo.getText(),notat.getText());
-		goToDashboard((Stage)navn.getScene().getWindow(),main);
-		
+		// how to submit to mysql shiet
+		main.RegistrerNyApparatOvelse(navn.getText(), ovelse.getValue().toString(), apparat.getText(), kilo.getText(),
+				notat.getText());
+		goToDashboard((Stage) navn.getScene().getWindow(), main);
+
 	}
+
 	@FXML
 	public void onCancel() throws IOException {
-		goToDashboard((Stage)navn.getScene().getWindow(),main);
+		goToDashboard((Stage) navn.getScene().getWindow(), main);
 	}
+
 	@FXML
 	public void initialize() {
-		//Fyll #ovelse med items fra database
+		// Fyll #ovelse med items fra database
+		// Dummy info
+		Platform.runLater(()->{
+			fillItems();
+		});
+		
+
+	}
+
+	protected void fillItems() {
+		// TODO Auto-generated method stub
+		for(KeyValuePair k : main.HentTreningsgrupper()) {
+			ovelse.getItems().add(k);
+		}
+		ovelse.getSelectionModel().selectFirst();
 		
 	}
-	
+
 }

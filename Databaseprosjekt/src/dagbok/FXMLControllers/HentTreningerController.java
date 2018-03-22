@@ -20,7 +20,6 @@ public class HentTreningerController extends Controller{
 	@FXML
 	public void Hent() {
 		//hent siste øvelser
-		System.out.println(main); // IKKE NULL
 		main.HentTreningsokter(text.getText());
 	}
 	public void initialize() {

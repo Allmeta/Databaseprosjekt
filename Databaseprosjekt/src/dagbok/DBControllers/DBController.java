@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 
 import javafx.application.Application;
 
@@ -11,6 +12,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import src.dagbok.FXMLControllers.Controller;
@@ -35,6 +37,13 @@ public class DBController extends Application {
 		Scene scene = new Scene(root);
 		primaryStage.setScene(scene);
 		primaryStage.setTitle("Treningsdagbok");
+		
+		//Style scene
+		scene.getStylesheets().add(
+			    getClass().getResource("../CSS/style.css").toExternalForm());
+		primaryStage.getIcons().add(
+				   new Image(
+				      getClass().getResourceAsStream( "../CSS/icon.png" )));
 		
 		Controller controller = loader.getController();
 		controller.setMain(this);
@@ -106,6 +115,12 @@ public class DBController extends Application {
 	public void HentTreningsokter(String antall) {
 		// Hent N treningsøkter fra database
 		
+	}
+	public ArrayList<KeyValuePair> HentTreningsgrupper(){
+		ArrayList<KeyValuePair> temp=new ArrayList<KeyValuePair>();
+		temp.add(new KeyValuePair("0","Test1"));
+		temp.add(new KeyValuePair("1","Test2"));
+		return temp;
 	}
 
 }

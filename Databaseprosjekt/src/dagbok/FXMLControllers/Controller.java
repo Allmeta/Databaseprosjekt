@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 import src.dagbok.DBControllers.DBController;
@@ -33,7 +34,14 @@ public class Controller {
 			controller.setRoot(root);
 			controller.setMain(main2);
 			
-	        root.setScene(new Scene(parent));
+			Scene scene=new Scene(parent);
+			scene.getStylesheets().add(
+				    getClass().getResource("../CSS/style.css").toExternalForm());
+			root.getIcons().add(
+					   new Image(
+					      getClass().getResourceAsStream( "../CSS/icon.png" )));
+			
+	        root.setScene(scene);
 	    } 
 	    catch (IOException e)
 	    {
@@ -54,7 +62,14 @@ public class Controller {
 			controller.setRoot(root);
 			controller.setMain(main2);
 			
-	        root.setScene(new Scene(parent));
+			Scene scene=new Scene(parent);
+			scene.getStylesheets().add(
+				    getClass().getResource("../CSS/style.css").toExternalForm());
+			root.getIcons().add(
+					   new Image(
+					      getClass().getResourceAsStream( "../CSS/icon.png" )));
+			
+	        root.setScene(scene);
 	    } 
 	    catch (IOException e)
 	    {
@@ -73,7 +88,14 @@ public class Controller {
 			controller.setRoot(root);
 			controller.setMain(main2);
 			
-	        root.setScene(new Scene(parent));
+			Scene scene=new Scene(parent);
+			scene.getStylesheets().add(
+				    getClass().getResource("../CSS/style.css").toExternalForm());
+			root.getIcons().add(
+					   new Image(
+					      getClass().getResourceAsStream( "../CSS/icon.png" )));
+			
+	        root.setScene(scene);
 	    } 
 	    catch (IOException e)
 	    {

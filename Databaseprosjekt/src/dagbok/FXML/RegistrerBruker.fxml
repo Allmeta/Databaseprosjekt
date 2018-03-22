@@ -6,48 +6,42 @@
 <?import javafx.scene.layout.*?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="443.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="src.dagbok.FXMLControllers.RegisterController">
-   <bottom>
-      <SplitPane orientation="VERTICAL" prefHeight="72.0" prefWidth="600.0" BorderPane.alignment="CENTER">
-        <items>
-            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
-               <children>
-                  <Button fx:id="Cancel" mnemonicParsing="false" onAction="#CancelReg" text="Avbryt" />
-                  <Button fx:id="Submit" mnemonicParsing="false" onAction="#SubmitReg" text="Registrer" />
-               </children>
-            </HBox>
-        </items>
-      </SplitPane>
-   </bottom>
-   <center>
-      <SplitPane dividerPositions="0.07190635451505016" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-        <items>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" />
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
-               <children>
-                  <TextField fx:id="Fornavn" layoutX="133.0" layoutY="45.0" />
-                  <TextField fx:id="Etternavn" layoutX="133.0" layoutY="101.0" />
-                  <TextField fx:id="Pnr" layoutX="133.0" layoutY="157.0" />
-                  <TextField fx:id="Brukernavn" layoutX="133.0" layoutY="208.0" />
-                  <TextField fx:id="Passord" layoutX="133.0" layoutY="256.0" />
-                  <Text layoutX="31.0" layoutY="66.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fornavn" />
-                  <Text layoutX="31.0" layoutY="122.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Etternavn" />
-                  <Text layoutX="31.0" layoutY="178.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Personnr" />
-                  <Text layoutX="31.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Brukernavn" />
-                  <Text layoutX="31.0" layoutY="277.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Passord" />
-               </children>
-            </AnchorPane>
-        </items>
-      </SplitPane>
-   </center>
    <top>
-      <VBox alignment="CENTER" prefHeight="49.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+      <VBox alignment="CENTER" prefHeight="371.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
             <Label text="Registrer bruker">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
+            <Separator prefWidth="200.0" />
+            <HBox prefHeight="314.0" prefWidth="600.0">
+               <children>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="314.0" prefWidth="588.0">
+                     <children>
+                        <TextField fx:id="Fornavn" layoutX="208.0" layoutY="45.0" />
+                        <TextField fx:id="Etternavn" layoutX="208.0" layoutY="93.0" />
+                        <TextField fx:id="Pnr" layoutX="208.0" layoutY="145.0" />
+                        <TextField fx:id="Brukernavn" layoutX="208.0" layoutY="200.0" />
+                        <TextField fx:id="Passord" layoutX="208.0" layoutY="248.0" />
+                        <Label layoutX="81.0" layoutY="49.0" text="Fornavn" />
+                        <Label layoutX="78.0" layoutY="97.0" text="Etternavn" />
+                        <Label layoutX="79.0" layoutY="149.0" text="Personnr" />
+                        <Label layoutX="73.0" layoutY="204.0" text="Brukernavn" />
+                        <Label layoutX="82.0" layoutY="252.0" text="Passord" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </HBox>
          </children>
       </VBox>
    </top>
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="Cancel" mnemonicParsing="false" onAction="#CancelReg" text="Avbryt" />
+            <Button fx:id="Submit" mnemonicParsing="false" onAction="#SubmitReg" text="Registrer" />
+         </children>
+      </HBox>
+   </bottom>
 </BorderPane>
