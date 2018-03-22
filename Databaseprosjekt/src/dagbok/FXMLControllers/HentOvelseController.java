@@ -4,9 +4,11 @@ import java.io.IOException;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import src.dagbok.DBControllers.KeyValuePair;
 
 public class HentOvelseController extends Controller{
 	@FXML private ListView list;

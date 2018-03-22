@@ -1,8 +1,7 @@
 package src.dagbok.FXMLControllers;
 
 import java.io.IOException;
-import java.sql.SQLException;
-
+import java.sql.*; 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -10,6 +9,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 import javafx.stage.Window;
+import src.dagbok.DBControllers.DBController;
 
 public class RegisterController extends Controller{
 
@@ -59,8 +59,33 @@ public class RegisterController extends Controller{
 				"Velkommen " + Fornavn.getText());
 		main.Register(Fornavn.getText(),Etternavn.getText(),Brukernavn.getText(),Pnr.getText(),Passord.getText());
 		
-		goToDashboard((Stage)Fornavn.getScene().getWindow(),main);
+		String username = Brukernavn.getText().toString();
+		String password = Passord.getText().toString();
+		String fornavn = Fornavn.getText().toString();
+		String etternavn = Etternavn.getText().toString();
+		String pnummer = Pnr.getText().toString();
+		
+		
+		
+		String sql = "INSERT INTO Person( Personnummer, fornavn, etternavn, passord, brukernavn) values('" + pnummer + "', '" + fornavn + "', '" + etternavn + "', '" + password + "', '" + username + "') " ;
+		
+		
+		Statement statement = main.conn.createStatement();
+		statement.executeUpdate(sql);
+		
+		
+		
+		
+		
+		goToLogin((Stage)Fornavn.getScene().getWindow(),main);
 
 	}
+	
+		
+		
+		
+	
+	
+	
 
 }

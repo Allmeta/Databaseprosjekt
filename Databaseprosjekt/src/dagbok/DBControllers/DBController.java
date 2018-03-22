@@ -20,9 +20,10 @@ import src.dagbok.FXMLControllers.Controller;
 @SuppressWarnings("unused")
 public class DBController extends Application {
 
-	private Connection conn;
+	public Connection conn;
 	public ArrayList<KeyValuePair> ovelsegruppe=new ArrayList<KeyValuePair>();
 	public ArrayList<KeyValuePair> apparater=new ArrayList<KeyValuePair>();
+	public ArrayList<TreningKlasse> treninger=new ArrayList<TreningKlasse>();
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
@@ -30,9 +31,7 @@ public class DBController extends Application {
 		initDatabase();
 		// must init controller
 		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(getClass().getResource("../FXML/login.fxml"));
-		
-		
+		loader.setLocation(getClass().getResource("../FXML/login.fxml"));	
 
 		Parent root = loader.load();
 
@@ -63,6 +62,8 @@ public class DBController extends Application {
 		apparater.add(new KeyValuePair("0","Romaskin"));
 		apparater.add(new KeyValuePair("1","Beinmaskin idk"));
 		
+		treninger.add(new TreningKlasse("Apparatøvelse","Navn på øvelse"));
+		treninger.add(new TreningKlasse("Annen øvelse","Navn på øvelse"));
 		//fra database på login
 		//HentApparater();
 		//HentOvelsegruppe();
@@ -109,23 +110,19 @@ public class DBController extends Application {
 	}
 
 	public void RegistrerNyApparatOvelse(String string, String string2, String string3, String string4,
-			String string5) {
+			String string5) throws SQLException {
 		// TODO Sende til database
 		String apparatString = "INSERT * INTO ovelse";
-		Connection conn = DriverManager.getConnection("jdbc:mysql://mysql.stud.ntnu.no/thomalme_124", "thomalme",
-				"test1");
 		Statement stmt = conn.createStatement();
 		stmt.executeQuery(apparatString);
 
 	}
 
-	public void RegistrerNyAnnenOvelse(String string, String string2, String string3) {
+	public void RegistrerNyAnnenOvelse(String string, String string2, String string3) throws SQLException {
 		// sende til database
 		String annenString = "INSERT * INTO ovelse";
-		Connection conn = DriverManager.getConnection("jdbc:mysql://mysql.stud.ntnu.no/thomalme_124", "thomalme",
-				"test1");
 		Statement stmt = conn.createStatement();
-		stmt.executeQuery(apparatString);
+		stmt.executeQuery(annenString);
 
 	}
 
@@ -136,8 +133,8 @@ public class DBController extends Application {
 	}
 
 	public void HentTreningsokter(String antall) {
-		// Hent N treningsï¿½kter fra database
-		
+		// Hent N treningsøkter fra database
+		//this.treninger= noe fra database
 		
 	}
 	public ArrayList<KeyValuePair> HentTreningsgrupper(){

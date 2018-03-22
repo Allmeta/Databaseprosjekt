@@ -1,6 +1,7 @@
 package src.dagbok.FXMLControllers;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 import javafx.application.Platform;
 import javafx.fxml.FXML;
@@ -22,7 +23,7 @@ public class NyAppOvelseController extends Controller {
 	private TextField notat;
 
 	@FXML
-	public void onSubmit() throws IOException {
+	public void onSubmit() throws IOException, SQLException {
 		// how to submit to mysql shiet
 		main.RegistrerNyApparatOvelse(navn.getText(), ovelse.getValue().toString(), apparat.getValue().toString(), kilo.getText(),
 				notat.getText());

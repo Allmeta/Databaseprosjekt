@@ -1,6 +1,7 @@
 package src.dagbok.FXMLControllers;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 import javafx.application.Platform;
 import javafx.fxml.FXML;
@@ -18,7 +19,7 @@ public class NyAnnenOvelseController extends Controller{
     private TextField notat;
 	
 	@FXML
-	public void onSubmit() throws IOException {
+	public void onSubmit() throws IOException, SQLException {
 		main.RegistrerNyAnnenOvelse(navn.getText(),ovelse.getValue().toString(),notat.getText());
 		goToDashboard((Stage)navn.getScene().getWindow(),main);
 		

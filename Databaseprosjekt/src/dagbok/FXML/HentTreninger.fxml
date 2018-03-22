@@ -30,7 +30,12 @@
                         <Button mnemonicParsing="false" onAction="#Hent" text="Hent" />
                      </children>
                   </VBox>
-                  <ListView fx:id="list" prefHeight="298.0" prefWidth="500.0" />
+                  <TableView fx:id="view" prefHeight="298.0" prefWidth="479.0">
+                    <columns>
+                      <TableColumn fx:id="type" prefWidth="240.0" text="Type" />
+                      <TableColumn fx:id="navn" minWidth="9.0" prefWidth="238.0" text="Navn" />
+                    </columns>
+                  </TableView>
                </children>
                <padding>
                   <Insets left="10.0" right="10.0" />
