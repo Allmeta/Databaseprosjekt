@@ -45,17 +45,17 @@ public class RegisterController extends Controller{
 		Window owner = Submit.getScene().getWindow();
 
 		if (Fornavn.getText().isEmpty() || Etternavn.getText().isEmpty()) {
-			AlertHelper.showAlert(Alert.AlertType.ERROR, owner, "Form Error!", "Please enter your name");
+			AlertHelper.showAlert(Alert.AlertType.ERROR, owner, "Form Error!", "Vennilgt skriv navnet ditt");
 			return;
 		}
 
 		if (Passord.getText().isEmpty()) {
-			AlertHelper.showAlert(Alert.AlertType.ERROR, owner, "Form Error!", "Please enter a password");
+			AlertHelper.showAlert(Alert.AlertType.ERROR, owner, "Form Error!", "Vennilgt skriv et passord");
 			return;
 		}
 
-		AlertHelper.showAlert(Alert.AlertType.CONFIRMATION, owner, "Registration Successful!",
-				"Welcome " + Fornavn.getText());
+		AlertHelper.showAlert(Alert.AlertType.CONFIRMATION, owner, "Registrering fullført!",
+				"Velkommen " + Fornavn.getText());
 		main.Register(Fornavn.getText(),Etternavn.getText(),Brukernavn.getText(),Pnr.getText(),Passord.getText());
 		
 		goToDashboard((Stage)Fornavn.getScene().getWindow(),main);
