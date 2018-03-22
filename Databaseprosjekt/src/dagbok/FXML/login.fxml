@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="src.dagbok.FXMLControllers.LoginController">
+   <center>
+      <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="brukernavn" maxHeight="25.0" maxWidth="158.0" minHeight="25.0" minWidth="100.0" prefHeight="25.0" prefWidth="158.0" />
+            <TextField fx:id="passord" maxHeight="25.0" maxWidth="158.0" minHeight="25.0" minWidth="125.0" prefHeight="25.0" prefWidth="158.0" />
+         </children>
+      </VBox>
+   </center>
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#Login" text="Logg inn" />
+            <Button mnemonicParsing="false" onAction="#Reg" text="Registrer deg" />
+         </children>
+      </HBox>
+   </bottom>
+   <left>
+      <VBox alignment="CENTER" prefHeight="300.0" prefWidth="211.0" spacing="20.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="TOP_LEFT" text="Brukernavn:" />
+            <Label alignment="CENTER_RIGHT" text="Passord:" />
+         </children>
+      </VBox>
+   </left>
+   <top>
+      <VBox alignment="CENTER" prefHeight="115.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Logg inn">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Separator prefWidth="200.0" />
+         </children>
+      </VBox>
+   </top>
+</BorderPane>

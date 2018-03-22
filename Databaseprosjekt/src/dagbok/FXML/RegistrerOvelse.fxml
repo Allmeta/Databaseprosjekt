@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="338.0" prefWidth="475.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="src.dagbok.FXMLControllers.RegistrerOvelseController">
+   <top>
+      <VBox alignment="CENTER" prefHeight="213.0" prefWidth="475.0" spacing="10.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label text="Velg type øvelse">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Separator prefWidth="200.0" />
+            <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="63.0" prefWidth="180.0" spacing="10.0">
+                     <children>
+                        <Button fx:id="med" mnemonicParsing="false" onAction="#apparatOvelse" text="Med apparat" />
+                        <Button mnemonicParsing="false" onAction="#annenOvelse" text="Uten apparat" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="55.0" prefWidth="475.0" spacing="10.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#RegistrerApparat" text="Registrer apparat" />
+                        <Button mnemonicParsing="false" onAction="#RegistrerGruppe" text="Registrer treningsgruppe" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </top>
+   <center>
+      <Button alignment="CENTER" mnemonicParsing="false" onAction="#back" text="Avbryt" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>
