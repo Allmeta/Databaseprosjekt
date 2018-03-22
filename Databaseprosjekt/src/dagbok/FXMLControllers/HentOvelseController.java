@@ -11,13 +11,13 @@ import javafx.stage.Stage;
 public class HentOvelseController extends Controller{
 	@FXML private ListView list;
 	@FXML private Button back;
-	@FXML private ListView list;
+	@FXML private ComboBox<KeyValuePair> ovelse;
 	
 	@FXML
 	public void Back() throws IOException {
 		goToDashboard((Stage)back.getScene().getWindow(),main);
 	}
 	public void initializes() {
-		//Hent ovelser
+		//Hent ovelse
 	}
 }
