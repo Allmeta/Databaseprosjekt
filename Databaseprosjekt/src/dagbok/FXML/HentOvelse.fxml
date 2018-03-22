@@ -17,11 +17,12 @@
    <center>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0" BorderPane.alignment="CENTER">
          <children>
-            <Label text="Øvelselogg">
+            <Label text="Hent øvelser">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
+            <ChoiceBox prefWidth="150.0" />
             <HBox prefHeight="298.0" prefWidth="585.0">
                <children>
                   <ListView fx:id="list" prefHeight="298.0" prefWidth="621.0" />
