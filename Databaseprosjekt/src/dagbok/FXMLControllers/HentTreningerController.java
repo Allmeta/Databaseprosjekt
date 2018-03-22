@@ -22,7 +22,4 @@ public class HentTreningerController extends Controller{
 		//hent siste øvelser
 		main.HentTreningsokter(text.getText());
 	}
-	public void initialize() {
-		//Fill inn list from database
-	}
 }

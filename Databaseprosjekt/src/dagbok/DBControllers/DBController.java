@@ -21,11 +21,13 @@ import src.dagbok.FXMLControllers.Controller;
 public class DBController extends Application {
 
 	private Connection conn;
+	public ArrayList<KeyValuePair> ovelsegruppe=new ArrayList<KeyValuePair>();
+	public ArrayList<KeyValuePair> apparater=new ArrayList<KeyValuePair>();
 
 	@Override
 	public void start(Stage primaryStage) throws Exception {
 		//init database
-		//initDatabase();
+		initDatabase();
 		// must init controller
 		FXMLLoader loader = new FXMLLoader();
 		loader.setLocation(getClass().getResource("../FXML/login.fxml"));
@@ -53,6 +55,19 @@ public class DBController extends Application {
 	}
 
 	private void initDatabase() {
+		//dummy ovelseguppe
+		ovelsegruppe.add(new KeyValuePair("0","Test1"));
+		ovelsegruppe.add(new KeyValuePair("1","Test2"));
+		
+		//dummy apparater
+		apparater.add(new KeyValuePair("0","Romaskin"));
+		apparater.add(new KeyValuePair("1","Beinmaskin idk"));
+		
+		//fra database på login
+		//HentApparater();
+		//HentOvelsegruppe();
+		
+		
 		try {
 			// Step 1: "Load" the JDBC driver
 			Class.forName("com.mysql.jdbc.Driver");
@@ -77,21 +92,18 @@ public class DBController extends Application {
 
 	public void Login(String user, String p) {
 		// insert into database
+		
 
 	}
 
-	public void RegistrerApparat(String apparat) throws SQLException {
+	public void RegistrerApparat(String ny) throws SQLException {
 		// funker? idk
-		String apparatString = "INSERT apparat INTO ovelse";
-		Connection conn = DriverManager.getConnection("jdbc:mysql://mysql.stud.ntnu.no/thomalme_124", "thomalme",
-				"test1");
-		Statement stmt = conn.createStatement();
-		stmt.executeQuery(apparatString);
+		apparater.add(new KeyValuePair(""+apparater.size(), ny));
 
 	}
 
 	public void Register(String string, String string2, String string3, String string4,
-			String string5) {
+			String string5) throws SQLException {
 		// insert into database
 
 	}
@@ -109,6 +121,7 @@ public class DBController extends Application {
 
 	public void RegistrerNyOvelsegruppe(String ovelse) {
 		// Sende til database
+		ovelsegruppe.add(new KeyValuePair(""+ovelsegruppe.size(), ovelse));
 
 	}
 
@@ -117,10 +130,10 @@ public class DBController extends Application {
 		
 	}
 	public ArrayList<KeyValuePair> HentTreningsgrupper(){
-		ArrayList<KeyValuePair> temp=new ArrayList<KeyValuePair>();
-		temp.add(new KeyValuePair("0","Test1"));
-		temp.add(new KeyValuePair("1","Test2"));
-		return temp;
+		return ovelsegruppe;
+	}
+	public ArrayList<KeyValuePair> HentApparater(){
+		return apparater;
 	}
 
 }

@@ -15,7 +15,7 @@ public class NyAppOvelseController extends Controller {
 	@FXML
 	private ComboBox<KeyValuePair> ovelse;
 	@FXML
-	private TextField apparat;
+	private ComboBox<KeyValuePair> apparat;
 	@FXML
 	private TextField kilo;
 	@FXML
@@ -24,7 +24,7 @@ public class NyAppOvelseController extends Controller {
 	@FXML
 	public void onSubmit() throws IOException {
 		// how to submit to mysql shiet
-		main.RegistrerNyApparatOvelse(navn.getText(), ovelse.getValue().toString(), apparat.getText(), kilo.getText(),
+		main.RegistrerNyApparatOvelse(navn.getText(), ovelse.getValue().toString(), apparat.getValue().toString(), kilo.getText(),
 				notat.getText());
 		goToDashboard((Stage) navn.getScene().getWindow(), main);
 
@@ -52,7 +52,11 @@ public class NyAppOvelseController extends Controller {
 			ovelse.getItems().add(k);
 		}
 		ovelse.getSelectionModel().selectFirst();
-		
+		//apparat
+		for(KeyValuePair k : main.HentApparater()) {
+			apparat.getItems().add(k);
+		}
+		apparat.getSelectionModel().selectFirst();		
 	}
 
 }

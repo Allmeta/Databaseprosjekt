@@ -41,11 +41,11 @@
                         <Label text="Kilo" GridPane.rowIndex="3" />
                         <Label text="Sett" GridPane.rowIndex="4" />
                         <Label text="Notat" GridPane.rowIndex="5" />
-                        <TextField fx:id="apparat" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                         <TextField fx:id="kilo" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                         <TextField fx:id="sett" GridPane.columnIndex="1" GridPane.rowIndex="4" />
                         <TextField fx:id="notat" prefHeight="102.0" prefWidth="284.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
                         <ComboBox fx:id="ovelse" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <ComboBox fx:id="apparat" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                      </children>
                   </GridPane>
                </children>

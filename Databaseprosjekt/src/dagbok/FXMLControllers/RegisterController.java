@@ -1,6 +1,7 @@
 package src.dagbok.FXMLControllers;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -40,7 +41,7 @@ public class RegisterController extends Controller{
 	}
 
 	@FXML
-	void SubmitReg(ActionEvent event) throws IOException {
+	void SubmitReg(ActionEvent event) throws IOException, SQLException {
 
 		Window owner = Submit.getScene().getWindow();
 
