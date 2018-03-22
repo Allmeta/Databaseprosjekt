@@ -99,11 +99,21 @@ public class DBController extends Application {
 	public void RegistrerNyApparatOvelse(String string, String string2, String string3, String string4,
 			String string5) {
 		// TODO Sende til database
+		String apparatString = "INSERT * INTO ovelse";
+		Connection conn = DriverManager.getConnection("jdbc:mysql://mysql.stud.ntnu.no/thomalme_124", "thomalme",
+				"test1");
+		Statement stmt = conn.createStatement();
+		stmt.executeQuery(apparatString);
 
 	}
 
 	public void RegistrerNyAnnenOvelse(String string, String string2, String string3) {
 		// sende til database
+		String annenString = "INSERT * INTO ovelse";
+		Connection conn = DriverManager.getConnection("jdbc:mysql://mysql.stud.ntnu.no/thomalme_124", "thomalme",
+				"test1");
+		Statement stmt = conn.createStatement();
+		stmt.executeQuery(apparatString);
 
 	}
 
@@ -113,7 +123,7 @@ public class DBController extends Application {
 	}
 
 	public void HentTreningsokter(String antall) {
-		// Hent N treningsøkter fra database
+		// Hent N treningsï¿½kter fra database
 		
 	}
 	public ArrayList<KeyValuePair> HentTreningsgrupper(){
