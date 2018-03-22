@@ -128,6 +128,7 @@ public class DBController extends Application {
 	public void HentTreningsokter(String antall) {
 		// Hent N treningsøkter fra database
 		
+		
 	}
 	public ArrayList<KeyValuePair> HentTreningsgrupper(){
 		return ovelsegruppe;
