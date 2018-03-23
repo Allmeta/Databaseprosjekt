@@ -4,6 +4,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
 
+import com.mysql.fabric.xmlrpc.base.Array;
+
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
@@ -42,5 +44,11 @@ public class HentOvelseController extends Controller {
 	
 	@FXML
     private Button vislistemedovelser;
-
+	
+	
+	
+	vislistemedovelser.setOnAction((event)) -> {
+		
+	}
+		
 }
