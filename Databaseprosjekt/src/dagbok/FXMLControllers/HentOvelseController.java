@@ -3,6 +3,7 @@ package src.dagbok.FXMLControllers;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
+import java.sql.SQLException;
 
 import com.mysql.fabric.xmlrpc.base.Array;
 
@@ -47,8 +48,15 @@ public class HentOvelseController extends Controller {
 	
 	
 	
-	vislistemedovelser.setOnAction((event)) -> {
+	private void HandleHent(ActionEvent event) throws SQLException {
+	     // Button was clicked, do something...
+	    
+		String ovelsen = ovelse.getSelectionModel().getSelectedItem();
+; 
 		
+		main.HentOvelser(ovelsen);
+		
+	 }
 	}
 		
-}
+

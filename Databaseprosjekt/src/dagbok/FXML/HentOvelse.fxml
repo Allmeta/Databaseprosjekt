@@ -11,7 +11,7 @@
       <HBox alignment="CENTER" prefHeight="57.0" prefWidth="600.0" BorderPane.alignment="CENTER">
          <children>
             <Button fx:id="back" mnemonicParsing="false" onAction="#Back" text="Tilbake" />
-            <Button fx:id="vislistemedovelser" mnemonicParsing="false" text="Vis øvelser" />
+            <Button fx:id="vislistemedovelser" mnemonicParsing="false" onAction="#HandleHent" text="Vis øvelser" />
          </children>
       </HBox>
    </bottom>
