@@ -39,4 +39,8 @@ public class HentOvelseController extends Controller {
 		}
 		ovelse.getSelectionModel().selectFirst();
 	}
+	
+	@FXML
+    private Button vislistemedovelser;
+
 }
