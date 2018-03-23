@@ -16,7 +16,7 @@ public class NyOvelsegruppeController extends Controller{
 	
 	@FXML
 	public void gaTilbake() throws IOException {
-		goToDashboard((Stage)tekstNavn.getScene().getWindow(),main);
+		showScene("RegistrerOvelse.fxml",(Stage)tekstNavn.getScene().getWindow(),main);
 	}
 	
 	@FXML

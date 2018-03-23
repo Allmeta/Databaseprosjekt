@@ -154,6 +154,7 @@ VBox > .split-menu-button.last > .arrow-button {
 	-fx-text-fill: white;
 }
 
+
 .color-picker,.date-picker > .arrow-button,
 .button,.menu-button,.toggle-button,.number-button,.left-arrow-button,.right-arrow-button,
 .font-menu-button,
@@ -882,18 +883,29 @@ VBox > .split-menu-button.last > .arrow-button {
  ******************************************************************************/
 
 .slider .thumb {
+	-fx-text-fill:white;
 	-fx-background-color: white;
 	-fx-background-insets: 0, 1, 5;
 }
 .slider .thumb:hover {
+	-fx-background-color:#ccc;
 }
 .slider .track {
-	-fx-background-color: #192227;
+	-fx-background-color: #32464B;
 	-fx-background-insets: -1, 0, 1;
 	-fx-pref-height: 5;
+	-fx-text-fill:white;	
+}
+.slider .track:hover{
+	-fx-background-color:#2D3B3E;
+	-fx-cursor:hand;
+}
+.slider .axis{
+	-fx-tick-label-fill:white;
 }
 .slider:vertical .track {
 	-fx-pref-width: 5;
+	-fx-text-fill:white;
 }
 
 .label{
@@ -902,6 +914,12 @@ VBox > .split-menu-button.last > .arrow-button {
 .text-field{
 	-fx-text-fill:white;
 	-fx-background-color:#32464B;
+}
+.text-area,.text-area *{
+	-fx-text-fill:white;
+	-fx-background-color:#32464B;
+	-fx-border-radius:0;
+	-fx-background-radius:0;
 }
 .text{
 	-fx-text-fill:white;
@@ -920,6 +938,22 @@ VBox > .split-menu-button.last > .arrow-button {
 	-fx-background-color:#2D3B3E;
 	-fx-border-color:#2D3B3E;
 	-fx-text-fill:white;
+}
+.date-picker{
+	-fx-background-color: #32464B;
+	-fx-text-fill: white;
+}
+.date-picker .text-field{
+	-fx-background-color: #32464B;
+	-fx-text-fill: white;
+}
+.date-picker-popup *{
+	-fx-background-color: #32464B;
+	-fx-text-fill: white;
+}
+.date-picker-popup *:hover{
+	-fx-cursor:hand;
+	-fx-background-color:#2D3B3E;
 }
 
 

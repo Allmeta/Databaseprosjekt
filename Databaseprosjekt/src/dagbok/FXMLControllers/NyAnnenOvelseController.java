@@ -21,12 +21,12 @@ public class NyAnnenOvelseController extends Controller{
 	@FXML
 	public void onSubmit() throws IOException, SQLException {
 		main.RegistrerNyAnnenOvelse(navn.getText(),ovelse.getValue().toString(),notat.getText());
-		goToDashboard((Stage)navn.getScene().getWindow(),main);
+		showScene("RegistrerOvelse.fxml",(Stage)navn.getScene().getWindow(),main);
 		
 	}
 	@FXML
 	public void onCancel() throws IOException {
-		goToDashboard((Stage)navn.getScene().getWindow(),main);
+		showScene("RegistrerOvelse.fxml",(Stage)navn.getScene().getWindow(),main);
 	}
 	@FXML
 	public void initialize() {

@@ -54,10 +54,10 @@ public class LoginController extends Controller {
 		resultSet = preparedStatement.executeQuery();
 		
 		if (!resultSet.next()) {
-			infoBox("Enter Correct Email and Password", "Failed", null);
+			infoBox("Feil brukernavn eller passord!", "Failed", null);
 		} else {
-			infoBox("Login Successfull", "Success", null);
-
+			main.setPersonnummer(resultSet.getString("Personnummer"));
+			infoBox("Logget inn!", "Success", null);
 			goToDashboard((Stage) brukernavn.getScene().getWindow(), main);
 
 		}

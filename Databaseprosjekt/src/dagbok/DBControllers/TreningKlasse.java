@@ -1,17 +1,17 @@
 package src.dagbok.DBControllers;
 
 public class TreningKlasse {
-	public String navn;
-	public String type;
+	public String dato;
+	public String notat;
 
-	TreningKlasse(String type,String navn){
-		this.navn=navn;
-		this.type=type;
+	TreningKlasse(String dato,String notat){
+		this.dato=dato;
+		this.notat=notat;
 	}
-	public String getNavn() {
-		return this.navn;
+	public String getDato() {
+		return this.dato;
 	}
-	public String getType() {
-		return this.type;
+	public String getNotat() {
+		return this.notat;
 	}
 }

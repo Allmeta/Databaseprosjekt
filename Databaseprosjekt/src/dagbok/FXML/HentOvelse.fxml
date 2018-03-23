@@ -22,7 +22,7 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <ChoiceBox prefWidth="150.0" />
+            <ChoiceBox fx:id="ovelse" prefWidth="150.0" />
             <HBox prefHeight="298.0" prefWidth="585.0">
                <children>
                   <ListView fx:id="list" prefHeight="298.0" prefWidth="621.0" />

@@ -20,20 +20,19 @@ public class NyAppOvelseController extends Controller {
 	@FXML
 	private TextField kilo;
 	@FXML
-	private TextField notat;
+	private TextField sett;
 
 	@FXML
 	public void onSubmit() throws IOException, SQLException {
 		// how to submit to mysql shiet
-		main.RegistrerNyApparatOvelse(navn.getText(), ovelse.getValue().toString(), apparat.getValue().toString(), kilo.getText(),
-				notat.getText());
-		goToDashboard((Stage) navn.getScene().getWindow(), main);
+		main.RegistrerNyApparatOvelse(navn.getText(), ovelse.getValue().toString(), apparat.getValue().toString(), kilo.getText(),sett.getText());
+		showScene("RegistrerOvelse.fxml",(Stage)navn.getScene().getWindow(),main);
 
 	}
 
 	@FXML
 	public void onCancel() throws IOException {
-		goToDashboard((Stage) navn.getScene().getWindow(), main);
+		showScene("RegistrerOvelse.fxml",(Stage)navn.getScene().getWindow(),main);
 	}
 
 	@FXML

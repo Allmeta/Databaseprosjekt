@@ -17,7 +17,7 @@ public class RegistrerOvelseController extends Controller{
 		showScene("annenOvelse.fxml", (Stage)med.getScene().getWindow(),main);
 	}
 	@FXML
-	public void back() throws IOException{
+	public void complete() throws IOException{
 		goToDashboard((Stage)med.getScene().getWindow(),main);
 	}
 	public void RegistrerApparat() throws IOException {

@@ -6,13 +6,13 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="637.0" prefWidth="758.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="src.dagbok.FXMLControllers.NyAppOvelseController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="637.0" prefWidth="758.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="src.dagbok.FXMLControllers.RegistrerTreningsoktController">
    <top>
       <AnchorPane prefHeight="538.0" prefWidth="758.0" BorderPane.alignment="CENTER">
          <children>
             <VBox alignment="CENTER" prefHeight="550.0" prefWidth="758.0" spacing="10.0">
                <children>
-                  <Label text="Ny apparatøvelse">
+                  <Label text="Ny treningsøkt">
                      <font>
                         <Font size="24.0" />
                      </font>
@@ -30,19 +30,22 @@
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Label text="Navn på øvelse" />
-                        <TextField fx:id="navn" prefHeight="31.0" prefWidth="306.0" GridPane.columnIndex="1" />
-                        <Label text="Øvelsesgruppe" GridPane.rowIndex="1" />
-                        <Label text="Apparat" GridPane.rowIndex="2" />
+                        <Label text="Dato" />
+                        <Label text="Prestasjon" GridPane.rowIndex="1" />
+                        <Label text="Form" GridPane.rowIndex="2" />
                         <Label GridPane.rowIndex="3" />
-                        <Label text="Kilo" GridPane.rowIndex="3" />
-                        <Label text="Sett" GridPane.rowIndex="4" />
-                        <TextField fx:id="kilo" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                        <TextField fx:id="sett" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                        <ComboBox fx:id="ovelse" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <ComboBox fx:id="apparat" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <Label text="Tidspunkt" GridPane.rowIndex="3" />
+                        <Label text="Varighet" GridPane.rowIndex="4" />
+                        <Label text="Notat" GridPane.rowIndex="5" />
+                        <TextField fx:id="tid" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <TextField fx:id="varighet" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                        <DatePicker fx:id="dato" GridPane.columnIndex="1" />
+                        <Slider fx:id="prestasjon" blockIncrement="1.0" majorTickUnit="1.0" max="10.0" min="1.0" minorTickCount="0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="1.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <Slider fx:id="dagsform" blockIncrement="1.0" majorTickUnit="1.0" max="10.0" min="1.0" minorTickCount="0" showTickLabels="true" showTickMarks="true" snapToTicks="true" value="1.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextArea fx:id="notat" prefHeight="200.0" prefWidth="200.0" promptText="Beskriv formål, opplevelse e.l." GridPane.columnIndex="1" GridPane.rowIndex="5" />
                      </children>
                   </GridPane>
                </children>
@@ -56,8 +59,8 @@
    <bottom>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="Submit" mnemonicParsing="false" onAction="#onSubmit" text="Send inn" />
-            <Button fx:id="Cancel" mnemonicParsing="false" onAction="#onCancel" text="Avbryt" />
+            <Button fx:id="Submit" mnemonicParsing="false" onAction="#Submit" text="Send inn" />
+            <Button fx:id="Cancel" mnemonicParsing="false" onAction="#Cancel" text="Avbryt" />
          </children>
       </HBox>
    </bottom>

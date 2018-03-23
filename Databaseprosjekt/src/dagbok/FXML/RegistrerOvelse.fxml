@@ -8,34 +8,35 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="338.0" prefWidth="475.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="src.dagbok.FXMLControllers.RegistrerOvelseController">
    <top>
-      <VBox alignment="CENTER" prefHeight="213.0" prefWidth="475.0" spacing="10.0" BorderPane.alignment="CENTER">
+      <VBox alignment="CENTER" prefHeight="288.0" prefWidth="475.0" spacing="10.0" BorderPane.alignment="CENTER">
          <children>
-            <Label text="Velg type øvelse">
+            <Label text="Ny treningsøkt">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
             <Separator prefWidth="200.0" />
-            <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0">
+            <VBox alignment="CENTER_LEFT" prefHeight="200.0" prefWidth="100.0" spacing="10.0">
                <children>
-                  <HBox alignment="CENTER" prefHeight="63.0" prefWidth="180.0" spacing="10.0">
+                  <HBox alignment="CENTER" prefHeight="60.0" prefWidth="180.0" spacing="10.0">
                      <children>
-                        <Button fx:id="med" mnemonicParsing="false" onAction="#apparatOvelse" text="Med apparat" />
-                        <Button mnemonicParsing="false" onAction="#annenOvelse" text="Uten apparat" />
+                        <Button fx:id="med" mnemonicParsing="false" onAction="#apparatOvelse" prefHeight="63.0" prefWidth="217.0" text="Apparatøvelse" />
+                        <Button mnemonicParsing="false" onAction="#annenOvelse" prefHeight="63.0" prefWidth="217.0" text="Annen øvelse" />
                      </children>
                   </HBox>
-                  <HBox alignment="CENTER" prefHeight="55.0" prefWidth="475.0" spacing="10.0">
+                  <HBox alignment="CENTER" prefHeight="60.0" prefWidth="475.0" spacing="10.0">
                      <children>
-                        <Button mnemonicParsing="false" onAction="#RegistrerApparat" text="Registrer apparat" />
-                        <Button mnemonicParsing="false" onAction="#RegistrerGruppe" text="Registrer treningsgruppe" />
+                        <Button mnemonicParsing="false" onAction="#RegistrerApparat" prefHeight="77.0" prefWidth="217.0" text="Registrer nytt apparat" />
+                        <Button mnemonicParsing="false" onAction="#RegistrerGruppe" prefHeight="94.0" prefWidth="217.0" text="Registrer ny treningsgruppe" />
                      </children>
                   </HBox>
                </children>
             </VBox>
+            <Separator prefWidth="200.0" />
          </children>
       </VBox>
    </top>
    <center>
-      <Button alignment="CENTER" mnemonicParsing="false" onAction="#back" text="Avbryt" BorderPane.alignment="CENTER" />
+      <Button alignment="CENTER" mnemonicParsing="false" onAction="#complete" text="Ferdig" BorderPane.alignment="CENTER" />
    </center>
 </BorderPane>

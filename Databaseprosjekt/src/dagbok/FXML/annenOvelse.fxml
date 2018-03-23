@@ -38,10 +38,10 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Label text="Navn" />
+                        <Label text="Navn på øvelse" />
                         <TextField fx:id="navn" prefHeight="31.0" prefWidth="306.0" GridPane.columnIndex="1" />
                         <Label text="Øvelsesgruppe" GridPane.rowIndex="1" />
-                        <Label text="Notat" GridPane.rowIndex="2" />
+                        <Label text="Beskrivelse" GridPane.rowIndex="2" />
                         <TextField fx:id="notat" prefHeight="102.0" prefWidth="284.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                         <ComboBox fx:id="ovelse" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                      </children>

@@ -10,7 +10,7 @@
    <top>
       <VBox alignment="CENTER" prefHeight="278.0" prefWidth="600.0" spacing="10.0" BorderPane.alignment="CENTER">
          <children>
-            <Label text="Dashboard">
+            <Label text="Hovedmeny">
                <font>
                   <Font size="24.0" />
                </font>
@@ -19,8 +19,9 @@
             <Button fx:id="register" mnemonicParsing="false" onAction="#Register" text="Registrer treningsøkt" />
             <HBox alignment="CENTER" prefHeight="87.0" prefWidth="600.0" spacing="10.0">
                <children>
-                  <Button fx:id="tidligereTreninger" mnemonicParsing="false" onAction="#hentTreninger" text="Hent tidligere treninger" />
-                  <Button fx:id="resLogg" mnemonicParsing="false" onAction="#hentResultatlogg" text="Hent resultatlogg" />
+                  <Button fx:id="tidligereTreninger" mnemonicParsing="false" onAction="#hentTreninger" text="Siste treninger" />
+                  <Button fx:id="resLogg" mnemonicParsing="false" onAction="#hentResultatlogg" text="Resultatlogg" />
+                  <Button mnemonicParsing="false" onAction="#goToOvelsegruppe" text="Øvelser etter øvelsegruppe" />
                </children>
             </HBox>
          </children>
