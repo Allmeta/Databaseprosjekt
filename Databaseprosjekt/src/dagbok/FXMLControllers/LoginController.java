@@ -13,7 +13,7 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import src.dagbok.DBControllers.DBController;
+import src.dagbok.DBController;
 import javafx.scene.Node;
 import java.sql.Connection;
 

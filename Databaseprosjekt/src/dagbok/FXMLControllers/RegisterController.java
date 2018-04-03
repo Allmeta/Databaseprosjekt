@@ -9,7 +9,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.Alert;
 import javafx.stage.Stage;
 import javafx.stage.Window;
-import src.dagbok.DBControllers.DBController;
+import src.dagbok.DBController;
 
 public class RegisterController extends Controller{
 

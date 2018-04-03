@@ -6,7 +6,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
-import src.dagbok.DBControllers.DBController;
+import src.dagbok.DBController;
 
 public class DashboardController extends Controller{
 	@FXML private Button register;

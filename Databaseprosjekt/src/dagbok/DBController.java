@@ -1,4 +1,4 @@
-package src.dagbok.DBControllers;
+package src.dagbok;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -16,6 +16,9 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import src.dagbok.DBControllers.KeyValuePair;
+import src.dagbok.DBControllers.OvelseKlasse;
+import src.dagbok.DBControllers.TreningKlasse;
 import src.dagbok.FXMLControllers.Controller;
 
 @SuppressWarnings("unused")
@@ -36,7 +39,7 @@ public class DBController extends Application {
 		initDatabase();
 		// must init controller
 		FXMLLoader loader = new FXMLLoader();
-		loader.setLocation(getClass().getResource("../FXML/login.fxml"));
+		loader.setLocation(getClass().getResource("FXML/login.fxml"));
 
 		Parent root = loader.load();
 
@@ -45,8 +48,8 @@ public class DBController extends Application {
 		primaryStage.setTitle("Treningsdagbok");
 
 		// Style scene
-		scene.getStylesheets().add(getClass().getResource("../CSS/style.css").toExternalForm());
-		primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("../CSS/icon.png")));
+		scene.getStylesheets().add(getClass().getResource("CSS/style.css").toExternalForm());
+		primaryStage.getIcons().add(new Image(getClass().getResourceAsStream("CSS/icon.png")));
 
 		Controller controller = loader.getController();
 		controller.setMain(this);

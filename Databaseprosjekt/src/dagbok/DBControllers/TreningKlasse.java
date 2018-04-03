@@ -4,7 +4,7 @@ public class TreningKlasse {
 	public String dato;
 	public String notat;
 
-	TreningKlasse(String dato,String notat){
+	public TreningKlasse(String dato,String notat){
 		this.dato=dato;
 		this.notat=notat;
 	}

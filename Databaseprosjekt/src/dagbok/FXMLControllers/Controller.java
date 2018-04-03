@@ -7,7 +7,7 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
-import src.dagbok.DBControllers.DBController;
+import src.dagbok.DBController;
 
 public class Controller {
 	protected DBController main;
@@ -23,8 +23,8 @@ public class Controller {
 		return this.root;
 	}
 	public void showScene(String sceneText, Stage root, DBController main2) throws IOException {
-	    FXMLLoader loader = new FXMLLoader(getClass()
-	            .getResource("../FXML/"+sceneText));
+	    FXMLLoader loader = new FXMLLoader(DBController.class
+	            .getResource("FXML/"+sceneText));
 	    BorderPane parent;
 	    try 
 	    {
@@ -36,10 +36,10 @@ public class Controller {
 			
 			Scene scene=new Scene(parent);
 			scene.getStylesheets().add(
-				    getClass().getResource("../CSS/style.css").toExternalForm());
+					DBController.class.getResource("CSS/style.css").toExternalForm());
 			root.getIcons().add(
 					   new Image(
-					      getClass().getResourceAsStream( "../CSS/icon.png" )));
+							   DBController.class.getResourceAsStream( "CSS/icon.png" )));
 			
 	        root.setScene(scene);
 	    } 
@@ -51,8 +51,8 @@ public class Controller {
 
 	}
 	public void goToDashboard(Stage root, DBController main2) throws IOException {
-		FXMLLoader loader = new FXMLLoader(getClass()
-	            .getResource("../FXML/Dashboard.fxml"));
+		FXMLLoader loader = new FXMLLoader(DBController.class
+	            .getResource("FXML/Dashboard.fxml"));
 	    BorderPane parent;
 	    try 
 	    {
@@ -64,10 +64,10 @@ public class Controller {
 			
 			Scene scene=new Scene(parent);
 			scene.getStylesheets().add(
-				    getClass().getResource("../CSS/style.css").toExternalForm());
+					DBController.class.getResource("CSS/style.css").toExternalForm());
 			root.getIcons().add(
 					   new Image(
-					      getClass().getResourceAsStream( "../CSS/icon.png" )));
+							   DBController.class.getResourceAsStream( "CSS/icon.png" )));
 			
 	        root.setScene(scene);
 	    } 
@@ -77,8 +77,8 @@ public class Controller {
 	    }	    
 	}
 	public void goToLogin(Stage root, DBController main2) throws IOException {
-		FXMLLoader loader = new FXMLLoader(getClass()
-	            .getResource("../FXML/login.fxml"));
+		FXMLLoader loader = new FXMLLoader(DBController.class
+	            .getResource("FXML/login.fxml"));
 	    BorderPane parent;
 	    try 
 	    {
@@ -90,10 +90,10 @@ public class Controller {
 			
 			Scene scene=new Scene(parent);
 			scene.getStylesheets().add(
-				    getClass().getResource("../CSS/style.css").toExternalForm());
+					DBController.class.getResource("CSS/style.css").toExternalForm());
 			root.getIcons().add(
 					   new Image(
-					      getClass().getResourceAsStream( "../CSS/icon.png" )));
+							   DBController.class.getResourceAsStream( "CSS/icon.png" )));
 			
 	        root.setScene(scene);
 	    } 

@@ -51,7 +51,7 @@ public class HentOvelseController extends Controller {
 	private void HandleHent(ActionEvent event) throws SQLException {
 	     // Button was clicked, do something...
 	    
-		String ovelsen = ovelse.getSelectionModel().getSelectedItem();
+		String ovelsen = ovelse.getSelectionModel().getSelectedItem().toString();
 ; 
 		
 		main.HentOvelser(ovelsen);
